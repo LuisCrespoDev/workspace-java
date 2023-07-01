@@ -3,7 +3,7 @@ package edu.crespo.primeiraparte;
 import java.util.Scanner;
 
 public class ContaTerminal {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         ContaBanco conta = new ContaBanco();
 
@@ -18,6 +18,7 @@ public class ContaTerminal {
         String nomeCliente = sc.nextLine();
 
         System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numeroConta + " e seu saldo R$" + conta.saldo + " já está disponível para saque.");
-
+        
+        sc.close();
     }
 }
